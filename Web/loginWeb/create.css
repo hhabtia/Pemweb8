@@ -1,0 +1,155 @@
+/* ============================
+   GLOBAL DARK MODE SETTINGS
+============================ */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Dark background */
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ============================
+   CONTAINER
+============================ */
+.create-account-container {
+    background-color: #000; /* Dark background */
+    color: #eee;
+    width: 360px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+/* ============================
+   TWITTER LOGO + TITLE
+============================ */
+.twitter-logo {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* ============================
+   FACEBOOK BUTTON
+============================ */
+.facebook-btn {
+    width: 100%;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.facebook-btn .icon {
+    margin-right: 8px;
+}
+
+/* ============================
+   DIVIDER
+============================ */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #666;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background-color: #333;
+}
+
+.or {
+    padding: 0 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* ============================
+   FORM INPUTS
+============================ */
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #111; /* Darker field */
+    color: #eee;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.signup-form input::placeholder {
+    color: #888;
+}
+
+/* ============================
+   INFO & LINKS
+============================ */
+.info {
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.info a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+/* ============================
+   SIGNUP BUTTON
+============================ */
+.signup-btn {
+    width: 100%;
+    background-color: #1d9bf0;
+    color: white;
+    padding: 10px;
+    border-radius: 9999px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.signup-btn:hover {
+    opacity: 0.9;
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.login-redirect a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}

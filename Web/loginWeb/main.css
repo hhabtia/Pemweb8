@@ -1,0 +1,671 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.sidebar,
+.right-sidebar {
+    width: 20%;
+    padding: 20px;
+}
+
+.sidebar {
+    margin: -40px 0 0 -40px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sidebar-logo img {
+    width: 60px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    gap: 10px;
+}
+
+.sidebar .icon {
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+.sidebar li.more i {
+    visibility: hidden;
+}
+
+.sidebar li span {
+    margin-left: 10px;
+}
+
+.sidebar li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .active {
+    font-weight: bold;
+}
+
+.profile-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 10px 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.back-btn {
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: white;
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name strong {
+    font-size: 16px;
+    color: white;
+}
+
+.post-count {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.post-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.post-btn:hover {
+    background: white;
+}
+
+.main-content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+}
+
+.cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid black;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px 10px;
+}
+
+.profile-details h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.profile-details p {
+    margin-bottom: 6px;
+}
+
+.bio,
+.username,
+.details {
+    font-size: 16px;
+    color: white;
+}
+
+.username,
+.post-content .username {
+    color: #888;
+    font-size: 15px;
+}
+
+.details {
+    color: #6c7075;
+}
+
+.edit-profile {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    top: -10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.tabs span {
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+}
+
+.tabs .active {
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.posts {
+    padding: 10px;
+}
+
+.post {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    gap: 10px;
+}
+
+.post img {
+    width: 50px;
+    border-radius: 50px;
+}
+
+.post-content p:first-child {
+    margin-bottom: 5px;
+}
+
+.post-date {
+    font-size: 14px;
+    color: #888;
+}
+
+.right-sidebar {
+    width: 280px;
+}
+
+.search-bar {
+    width: 125%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    box-shadow: 0 0 0 0.3px white;
+    border-radius: 30px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+.suggestions,
+.trending {
+    background: transparent;
+    box-shadow: 0 0 0 0.3px white;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.suggestion:last-child {
+    border-bottom: none;
+}
+
+.suggestion-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggestion-info {
+    flex: 1;
+}
+
+.suggestion-info p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.follow-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.following-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.show-more {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.trending h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.trending-item {
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}
+
+.trending-item:last-child {
+    border-bottom: none;
+}
+
+.trending-item small {
+    color: gray;
+    font-size: 12px;
+}
+
+.trending-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 0;
+    color: white;
+}
+
+.trending-item span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.following-list {
+    padding: 16px;
+    background: black;
+}
+
+.following-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+}
+
+.following-item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.following-info {
+    flex-grow: 1;
+}
+
+.following-info strong {
+    display: block;
+    font-size: 16px;
+    color: white;
+}
+
+.following-info p {
+    color: #888;
+    font-size: 14px;
+}
+
+.back-to-profile {
+    padding: 12px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.back-to-profile:hover {
+    text-decoration: underline;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(91, 112, 131, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #000;
+    color: white;
+    padding: 24px;
+    border-radius: 16px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-desc {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.modal-actions button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.unfollow-confirm {
+    background-color: white;
+    color: black;
+}
+
+.cancel-btn {
+    background-color: #333;
+    color: white;
+}
+
+#unfollowNotice {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    display: none;
+    z-index: 9999;
+    animation: fadeOut 3s forwards;
+    width: fit-content;
+    max-width: 90%;
+    text-align: center;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+.profile-details a {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-details a:hover {
+    text-decoration: underline;
+}
+
+.following-stats {
+    display: flex;
+    border-bottom: 1px solid #2f3336;
+}
+
+.following-stat {
+    flex: 1;
+    text-align: center;
+    padding: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.following-stat a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.following-stat.active {
+    border-bottom: 4px solid white;
+    color: white;
+}
+
+.following-stat.active a {
+    color: white;
+}
+
+.following-header {
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    z-index: 10;
+    border-bottom: 1px solid #2f3336;
+    display: flex;
+    align-items: center;
+}
+
+.following-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.following-stat:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.following-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    transition: background 0.2s;
+    border-bottom: 1px solid #2f3336;
+}
+
+.following-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.following-bio {
+    color: white;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 4px;
+}
+
+.following-btn-container {
+    margin-left: 12px;
+}
+
+.posting-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.posting-modal-content {
+    background: #000;
+    border-radius: 16px;
+    width: 500px;
+    max-width: 90%;
+    padding: 16px;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.posting-modal-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.posting-modal-body textarea.post-input {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+
+.posting-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+.post-submit {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.post-submit:hover {
+    background-color: #e6e6e6;
+}
+
+.post-submit:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.verified-badge {
+    color: #1d9bf0;
+    font-size: 14px;
+    margin-left: 4px;
+}
